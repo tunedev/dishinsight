@@ -9,18 +9,23 @@ import {
   getReviewTagColor,
   getReviewTagText,
 } from "@/utils/helpers";
+import { IDishWithReviewsAndAverageRatings } from "@/interface";
 
-export const DishDetails = ({ dish }) => {
+export const DishDetails: React.FC<{
+  dish: Omit<IDishWithReviewsAndAverageRatings, "averageScore">;
+}> = ({ dish }) => {
   const reviewScore = getDishAvgScore(dish.reviews);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="p-4 text-gray-700">
       <div className="w-full flex justify-between">
-        <h1 className="text-2xl font-bold mb-4">{dish.name}</h1>
+        <h1 className="sm:text-2xl md:text-4xl font-bold md:mb-4">
+          {dish.name}
+        </h1>
         <div className="ratings-card float-right">
           <span
-            className={`inline-block py-2 px-6 mb-4 rounded-full uppercase ${getReviewTagColor(
+            className={`inline-block py-2 sm:px-3 sm:text-sm md:px-6 mb-4 font-bold rounded-full uppercase ${getReviewTagColor(
               reviewScore
             )}`}
           >
@@ -32,13 +37,18 @@ export const DishDetails = ({ dish }) => {
           </span>
         </div>
       </div>
-      <Image
-        src={dish.image}
-        alt={dish.name}
-        className="w-full object-cover"
-        width={512}
-        height={240}
-      />
+      <div className="flex justify-center items-center w-[100%] mx-auto mb-4 md:h-[60vh] overflow-hidden rounded-t-3xl">
+        <Image
+          src={dish.image}
+          alt={dish.name}
+          className="w-full h-auto"
+          width={512}
+          height={240}
+          blurDataURL="/public/assets/placeholder-dishinsight.png"
+          placeholder="blur"
+          loading="lazy"
+        />
+      </div>
       <p>{dish.description}</p>
       <div>
         <RatingsForm dishId={dish.id} />

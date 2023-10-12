@@ -21,7 +21,9 @@ const getDishById = async (
   }
 };
 
-const DishDetailPage = async ({ params }) => {
+const DishDetailPage: React.FC<{ params: { id: string } }> = async ({
+  params,
+}) => {
   const dish = await getDishById(params.id);
 
   if (!dish) {

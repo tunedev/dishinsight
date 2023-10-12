@@ -2,7 +2,6 @@ import { Footer, Header } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="bg-gray-100 min-h-screen flex flex-col">
-          <Link href="/" className="block cursor-pointer">
-            <Header />
-          </Link>
+          <Header />
           <main className="flex-1 container mx-auto p-4 md:p-0 overflow-y-auto">
             {children}
           </main>

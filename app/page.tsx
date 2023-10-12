@@ -2,8 +2,9 @@ import { Dish } from "@prisma/client";
 import { DishCard } from "../components";
 import { prisma } from "@/utils/db";
 import { getDishAvgScore } from "@/utils/helpers";
+import { IDishWithReviewsAndAverageRatings } from "@/interface";
 
-const getDishes = async (): Promise<(Dish & { averageScore: number })[]> => {
+const getDishes = async (): Promise<IDishWithReviewsAndAverageRatings[]> => {
   const dishesWithReviews = await prisma.dish.findMany({
     include: { reviews: true },
   });

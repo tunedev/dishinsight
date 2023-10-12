@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
-export const RatingsForm = ({ dishId }) => {
-  const [reviewText, setReviewText] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const [feedback, setFeedback] = useState(null);
-  const [error, setError] = useState(null);
+export const RatingsForm: React.FC<{ dishId: string }> = ({ dishId }) => {
+  const [reviewText, setReviewText] = useState<string>("");
+  const [submitting, setSubmitting] = useState<boolean>(false);
+  const [feedback, setFeedback] = useState<null | string>(null);
+  const [error, setError] = useState<null | string>(null);
 
   const handleReviewSubmit = async () => {
     setSubmitting(true);
@@ -22,8 +22,8 @@ export const RatingsForm = ({ dishId }) => {
         }),
       });
 
-      const data = await response.json();
-      if (data.success) {
+      await response.json();
+      if (response.ok) {
         setFeedback("Thanks for your review!");
         setReviewText(""); // Clear the textarea
       } else {
@@ -36,7 +36,7 @@ export const RatingsForm = ({ dishId }) => {
     }
   };
 
-  const handleReviewChange = (e) => {
+  const handleReviewChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const text = e.target.value;
     if (text.length > 800) {
       setError("Review should not exceed 800 characters.");
@@ -52,7 +52,7 @@ export const RatingsForm = ({ dishId }) => {
       <textarea
         value={reviewText}
         onChange={(e) => handleReviewChange(e)}
-        className="w-full p-2 border rounded mb-4"
+        className="w-full p-2 border rounded mb-4 sm:h-24"
         id="reviewTextarea"
         rows={4}
         placeholder="Share your thoughts about this dish..."

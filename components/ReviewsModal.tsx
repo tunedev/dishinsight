@@ -3,8 +3,13 @@ import {
   getReviewTagColor,
   getReviewTagText,
 } from "@/utils/helpers";
+import { Review } from "@prisma/client";
+import { MouseEventHandler } from "react";
 
-export const ReviewsModal = ({ reviews, onClose }) => {
+export const ReviewsModal: React.FC<{
+  reviews: Review[];
+  onClose: MouseEventHandler<HTMLButtonElement>;
+}> = ({ reviews, onClose }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
       <div className="bg-white p-4 rounded w-3/4 h-3/4 overflow-y-auto">

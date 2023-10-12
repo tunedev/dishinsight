@@ -9,7 +9,7 @@ export const getReviewScore = (review: Review): number =>
 
 export const getDishAvgScore = (reviews: Review[]) => {
   if (reviews.length === 0) {
-    return 5;
+    return 0;
   }
 
   // Calculate average score from reviews
