@@ -20,15 +20,13 @@ export const DishDetails: React.FC<{
   return (
     <div className="p-4 text-gray-700">
       <div className="w-full flex justify-between">
-        <h1 className="sm:text-2xl md:text-4xl font-bold md:mb-4">
-          {dish.name}
-        </h1>
-        <div className="ratings-card float-right">
-          <span
-            className={`inline-block py-2 sm:px-3 sm:text-sm md:px-6 mb-4 font-bold rounded-full uppercase ${getReviewTagColor(
-              reviewScore
-            )}`}
-          >
+        <h1 className="text-2xl md:text-4xl font-bold md:mb-4">{dish.name}</h1>
+        <div
+          className={`font-bold rounded-full uppercase ratings-card float-right py-2 px-4 text-xs md:text-2xl md:px-6 mb-4 ${getReviewTagColor(
+            reviewScore
+          )}`}
+        >
+          <span className={`inline-block`}>
             {`${reviewScore} - ${
               dish.reviews.length > 0
                 ? getReviewTagText(reviewScore)
@@ -37,7 +35,7 @@ export const DishDetails: React.FC<{
           </span>
         </div>
       </div>
-      <div className="flex justify-center items-center w-[100%] mx-auto mb-4 md:h-[60vh] overflow-hidden rounded-t-3xl">
+      <div className="flex justify-center items-center w-[100%] mx-auto mb-4 lg:h-[60vh] overflow-hidden rounded-t-3xl">
         <Image
           src={dish.image}
           alt={dish.name}
