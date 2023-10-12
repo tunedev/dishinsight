@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  seed    = "ts-node prisma/seed.ts"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Dish {
+  id       String      @id @default(uuid())
+  name     String
+  description String
+  image String @db.MediumText
+  reviews  Review[]
+}
+
+model Review {
+  id          String      @id @default(uuid())
+  content     String @db.MediumText
+  createdAt   DateTime @default(now())
+  dishId      String
+  dish        Dish     @relation(fields: [dishId], references: [id])
+  sentiment   SentimentLabel  @default(neutral)
+  posProb     Float
+  negProb     Float
+  neutralProb Float           
+
+  @@index([dishId])
+}
+
+enum SentimentLabel {
+  pos
+  neg
+  neutral
+}

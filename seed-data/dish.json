@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Jollof Rice",
+    "description": "A beloved West African dish made with long-grain parboiled rice, tomatoes, onions, and various spices.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/iqxnhyqht6zjp5z0e77g.png"
+  },
+  {
+    "name": "Pounded Yam and Egusi Soup",
+    "description": "Smooth, stretchy pounded yam served with a thick, hearty melon seed soup.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103310/uxc3qqra5gzlyuc7qccl.png"
+  },
+  {
+    "name": "Suya",
+    "description": "Grilled meat skewers coated with spicy peanut mixture, often served with sliced onions and tomatoes.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/rre0p5xabjzlxzz9uvvl.png"
+  },
+  {
+    "name": "Akara (Bean Cakes)",
+    "description": "Deep-fried bean cakes made from black-eyed peas, onions, and other spices.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103310/jfz1ramxg53xb3ekspnq.png"
+  },
+  {
+    "name": "Boli (Grilled Plantain)",
+    "description": "Ripe plantains grilled to perfection, often enjoyed with groundnut sauce.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/pznevvqfm7t6zlgrdiym.png"
+  },
+  {
+    "name": "Moi Moi (Bean Pudding)",
+    "description": "A steamed bean pudding made from blended black-eyed peas, peppers, and spices.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103315/lukiwoaq60h1fxhilnub.png"
+  },
+  {
+    "name": "Ofada Rice and Sauce",
+    "description": "A unique variety of rice served with a spicy, pepper-rich sauce.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103308/yorrv1mbvjsnz8dw33df.png"
+  },
+  {
+    "name": "Banga Soup",
+    "description": "A flavorful soup made from palm fruits, herbs, and spices.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103307/v6whvcxuhszaeu5dw8yf.png"
+  },
+  {
+    "name": "Efo Riro (Spinach Stew)",
+    "description": "A rich spinach stew made with tomatoes, peppers, and an assortment of meats and/or fish.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/ucysvmetydvo1h0o5g8w.png"
+  },
+  {
+    "name": "Pepper Soup",
+    "description": "A spicy, broth-based soup filled with fish or meat and flavored with traditional spices.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/zdguoemjtenkzx3xpomi.png"
+  },
+  {
+    "name": "Fufu and Okra Soup",
+    "description": "Soft, stretchy fufu served with a slimy, delicious okra soup.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/jwjun6hregebxwb0je8u.png"
+  },
+  {
+    "name": "Edikang Ikong",
+    "description": "A rich vegetable soup made from fluted pumpkin leaves, waterleaf, and assorted meats.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/s2p6m834i6acxrgueajb.png"
+  },
+  {
+    "name": "Bitterleaf Soup (Ofe Onugbu)",
+    "description": "A traditional soup made from washed bitter leaves and thickened with cocoyam paste.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103310/yedzau5sjgdts2hvs86c.png"
+  },
+  {
+    "name": "Afang Soup",
+    "description": "A delicious soup made from shredded afang leaves and waterleaf, often enjoyed with fufu or pounded yam.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/bu2qnehq3x3bladwemjx.png"
+  },
+  {
+    "name": "Owo Soup",
+    "description": "A native Delta soup made with palm fruit extract, potash, and assorted spices.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/zbew5mh58tstzqmxlsp4.png"
+  },
+  {
+    "name": "Ikokore (Water Yam Pottage)",
+    "description": "A tasty pottage made from grated water yam, peppers, and spices.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103311/gfejbgnjihmkzvm9lnva.png"
+  },
+  {
+    "name": "Abacha (African Salad)",
+    "description": "A traditional salad made from dried shredded cassava, garden eggs, and other ingredients.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103310/q2vzoqdy6kd1d7ro72sh.png"
+  },
+  {
+    "name": "Isi Ewu (Goat Head Soup)",
+    "description": "A spicy delicacy made from goat's head, seasoned with traditional spices.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103310/fahjd9qr8wxvoxmp1zi5.png"
+  },
+  {
+    "name": "Ewa Agoyin",
+    "description": "Softly boiled beans served with a spicy, pepper-rich sauce.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103310/aubsfrh5iqwvdeclvp1w.png"
+  },
+  {
+    "name": "Ofe Owerri",
+    "description": "A traditional soup made with assorted vegetables, meats, and thickened with cocoyam paste.",
+    "image": "http://res.cloudinary.com/swissdevchi/image/upload/v1697103310/i0ic9wk1gwnvfkhaqnfn.png"
+  }
+]
