@@ -4,8 +4,10 @@ function roundUpToOneDecimals(num: number): number {
   return Math.ceil(num * 10) / 10;
 }
 
-export const getReviewScore = (review: Review): number =>
-  roundUpToOneDecimals(review.posProb * 10 - review.negProb * 5);
+export const getReviewScore = (review: Review): number => {
+  const weightedAvg = review.posProb * 10 - review.negProb * 10;
+  return roundUpToOneDecimals((weightedAvg + 10) / 2);
+};
 
 export const getDishAvgScore = (reviews: Review[]) => {
   if (reviews.length === 0) {
@@ -26,21 +28,25 @@ export const getDishAvgScore = (reviews: Review[]) => {
 };
 
 export const getReviewTagColor = (score: number) => {
-  if (score <= 5) return "bg-black text-white";
-  if (score <= 6.9) return "bg-yellow-500 text-black";
-  return "bg-green-500 text-white";
+  if (score <= 6.5) return "bad-review-text";
+  if (score <= 8.0) return "text-yellow";
+  return "text-green";
+};
+
+export const getReviewTagBgColor = (score: number) => {
+  if (score <= 6.5) return "bad-review-bg bad-review-text";
+  if (score <= 8.0) return "bg-yellow text-yellow";
+  return "bg-green text-green";
 };
 
 export const getReviewTagText = (score: number) => {
-  let label = "Not Recommended";
-  if (score >= 6.0 && score < 7.0) {
-    label = "IT's Fine";
-  } else if (score >= 7.0 && score < 8.0) {
-    label = "Pretty Good";
-  } else if (score >= 8.0 && score < 9.0) {
-    label = "Truly Excellent";
-  } else if (score >= 9.0) {
-    label = "Best of the Best";
+  let label = "Bad";
+  if (score >= 5.0 && score < 6.5) {
+    label = "Fair";
+  } else if (score >= 6.5 && score < 8.0) {
+    label = "Good";
+  } else if (score >= 8.0 && score < 10.0) {
+    label = "Excellent";
   }
   return label;
 };

@@ -29,3 +29,39 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.main-text-color {
+  color: #202633;
+}
+
+.secondary-text-color {
+  color: #a0aec0;
+}
+
+.header-background {
+  background-color: #047cdc;
+}
+
+.bad-review-text {
+  color: #ff9085;
+}
+
+.bad-review-bg {
+  background-color: #fff1ef;
+}
+
+.text-green {
+  color: #2a9a7b;
+}
+
+.text-yellow {
+  color: #ffa800;
+}
+
+.bg-green {
+  background-color: #e2fff7;
+}
+
+.bg-yellow {
+  background-color: #fcf5e5;
+}

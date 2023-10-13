@@ -1,5 +1,4 @@
-import { Dish } from "@prisma/client";
-import { DishCard } from "../components";
+import { DishListing } from "../components";
 import { prisma } from "@/utils/db";
 import { getDishAvgScore } from "@/utils/helpers";
 import { IDishWithReviewsAndAverageRatings } from "@/interface";
@@ -18,10 +17,8 @@ const getDishes = async (): Promise<IDishWithReviewsAndAverageRatings[]> => {
 const MyApp = async () => {
   const dishes = await getDishes();
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
-      {dishes.map((data) => (
-        <DishCard key={data.id} dish={data} />
-      ))}
+    <div>
+      <DishListing dishes={dishes} />
     </div>
   );
 };

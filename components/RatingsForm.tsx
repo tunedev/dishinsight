@@ -1,8 +1,18 @@
 "use client";
 
-import { ChangeEvent, useState } from "react";
+import { Dish, Review } from "@prisma/client";
+import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
 
-export const RatingsForm: React.FC<{ dishId: string }> = ({ dishId }) => {
+export const RatingsForm: React.FC<{
+  dishId: string;
+  setCurrentDish: Dispatch<
+    SetStateAction<
+      Dish & {
+        reviews: Review[];
+      }
+    >
+  >;
+}> = ({ dishId, setCurrentDish }) => {
   const [reviewText, setReviewText] = useState<string>("");
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [feedback, setFeedback] = useState<null | string>(null);
@@ -22,10 +32,13 @@ export const RatingsForm: React.FC<{ dishId: string }> = ({ dishId }) => {
         }),
       });
 
-      await response.json();
+      const data = (await response.json()) as {
+        data: Dish & { reviews: Review[] };
+      };
       if (response.ok) {
         setFeedback("Thanks for your review!");
         setReviewText(""); // Clear the textarea
+        setCurrentDish(data.data);
       } else {
         setFeedback("Something went wrong. Please try again.");
       }

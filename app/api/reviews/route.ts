@@ -17,7 +17,15 @@ export const POST = async (req: Request) => {
       neutralProb: sentimentAnalysis.probability.neutral,
     },
   });
+  const updatedDish = await prisma.dish.findUniqueOrThrow({
+    where: {
+      id: dishId,
+    },
+    include: {
+      reviews: true,
+    },
+  });
 
-  revalidatePath("/dishes");
-  return NextResponse.json({ data: {} });
+  revalidatePath(`/dishes/${dishId}`);
+  return NextResponse.json({ data: updatedDish });
 };
