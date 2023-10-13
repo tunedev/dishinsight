@@ -52,7 +52,7 @@ export const DishDetails: React.FC<{
               }`}
             </span>
           </div>
-          <p className="secondary-text-color row-span-2 col-span-2 md:text-2xl">
+          <p className="secondary-text-color row-span-2 col-span-2 text-xs md:text-2xl">
             {currentDish.description}
           </p>
         </div>
