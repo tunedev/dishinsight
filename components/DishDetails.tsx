@@ -36,11 +36,11 @@ export const DishDetails: React.FC<{
           />
         </div>
         <div className="row-span-3 col-span-1 relative mt-2 md:mt-6 mr-4">
-          <h1 className="text-lg mt-[25px] md:text-4xl font-bold md:mb-4 md:mt-[75px]">
+          <h1 className="text-lg mt-[40px] md:text-4xl font-bold md:mb-4 md:mt-[75px]">
             {currentDish.name}
           </h1>
           <div
-            className={`font-bold rounded-full uppercase ratings-card absolute top-0 right-0 py-2 px-4 text-xs md:text-lg md:px-6 mb-4 md:w-[200px] md:h-[40px] ${getReviewTagBgColor(
+            className={`font-bold rounded-full uppercase ratings-card absolute top-0 right-30 md:right-0 py-2 px-4 text-xs md:text-lg md:px-6 mb-4 md:w-[200px] md:h-[40px] ${getReviewTagBgColor(
               reviewScore
             )}`}
           >
