@@ -40,7 +40,7 @@ export const DishDetails: React.FC<{
             {currentDish.name}
           </h1>
           <div
-            className={`font-bold rounded-full uppercase ratings-card absolute top-0 right-0 py-2 px-4 text-xs md:text-lg md:px-6 mb-4 md:w-[150px] md:h-[40px] ${getReviewTagBgColor(
+            className={`font-bold rounded-full uppercase ratings-card absolute top-0 right-0 py-2 px-4 text-xs md:text-lg md:px-6 mb-4 md:w-[200px] md:h-[40px] ${getReviewTagBgColor(
               reviewScore
             )}`}
           >
