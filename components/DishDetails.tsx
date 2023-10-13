@@ -36,7 +36,7 @@ export const DishDetails: React.FC<{
           />
         </div>
         <div className="row-span-3 col-span-1 relative mt-6 mr-4">
-          <h1 className="text-2xl mt-[50px] md:text-4xl font-bold md:mb-4 md:mt-[75px]">
+          <h1 className="text-lg mt-[50px] md:text-4xl font-bold md:mb-4 md:mt-[75px]">
             {currentDish.name}
           </h1>
           <div
@@ -52,7 +52,7 @@ export const DishDetails: React.FC<{
               }`}
             </span>
           </div>
-          <p className="secondary-text-color row-span-2 col-span-2 md:text-2xl">
+          <p className="secondary-text-color row-span-2 col-span-2 text-sm md:text-2xl">
             {currentDish.description}
           </p>
         </div>

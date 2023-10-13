@@ -18,7 +18,7 @@ export const Reviews: React.FC<{
           const reviewScore = getReviewScore(review);
           return (
             <div key={review.id} className="mb-4">
-              <p className="uppercase">{review.content}</p>
+              <p className="secondary-text-color">{review.content}</p>
               <span
                 className={`inline-block p-2 mt-2 rounded ${getReviewTagColor(
                   reviewScore
